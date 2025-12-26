@@ -16,9 +16,7 @@ router
   //? User Access
   .use("/api/user", require("./UserAccess/user.js"))
 
-  //? Lab Technician
-  .use("/api/labTechnician", require("./LabTechnicion/labTechnicion.js"))
-
+  
   //? Uploads
   .post("/uploadFilesTos3", globalService.uploadFilesTos3)
   .post("/fileUpload/:folderName", globalService.fileUpload);
